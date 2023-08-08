@@ -66,7 +66,7 @@ df = pd.DataFrame(voyages)
 print(df)
 
 try:
-     df.to_excel(export_path + "vaccances.xlsx", index=False)
+     df.to_excel(export_path + "vaccances.xlsx")
      print("file created succefully!!")
      print(export_path)
 except:

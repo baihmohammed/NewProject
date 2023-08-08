@@ -1,16 +1,13 @@
 #====================import the necessary libraries
 import time
 from bs4 import BeautifulSoup
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
-
-#================webdriver initialisation
-service = Service(executable_path='./chromedriver.exe')
-options = webdriver.ChromeOptions()
-options.add_argument('--headless')
-driver = webdriver.Chrome(service=service, options=options)
-
-#===================Max number of offers that you want and the export path
-N_max = 50
+#================webdriver initialisa
 export_path = "C:/Users/hp/PycharmProjects/pythonSeleniumBeautifulSoup"
 
 #===================specify url and load the page_source after parse it to have the html code
@@ -62,7 +59,7 @@ df = pd.DataFrame(voyages)
 print(df)
 
 try:
-     df.to_excel(export_path + "vaccances.xlsx")
+     df.to_excel(export_path + "vaccances.xlsx", index=False)
      print("file created succefully!!")
      print(export_path)
 except:

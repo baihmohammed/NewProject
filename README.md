@@ -1,3 +1,3 @@
 # NewProject
 this is a new repo
-<h1>Hi every body</h1>
+<h1>welcom every body to my GitHub</h1>
